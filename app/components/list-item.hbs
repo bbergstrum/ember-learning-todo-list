@@ -1,0 +1,9 @@
+<article class="to-do">
+    <div class="details">
+        <div class="{{if this.isCompleted "completed"}}">
+            <h3>{{@description}}</h3>
+            <h4>{{@dueDate}}</h4>
+        </div>
+        <input type="checkbox" id="to-do" {{on "click" this.toggleToDoCompletion}}>
+    </div>
+</article>

@@ -1,0 +1,19 @@
+<div class="jumbo">
+    <h2>Create a To-Do</h2>
+    <h4>To-Do Description</h4>
+    <Input @value={{this.description}} />
+    <h4>To-Do Due Date</h4>
+    <Input @value={{this.dueDate}} />
+    <button class="button" {{ on 'click' this.addListItem }}type="submit">Add To-Do</button>
+</div>
+<ul>
+    {{#each this.toDoListItems as |listItem|}}
+        <li>
+            <List-Item 
+                @description={{listItem.description}}
+                @dueDate={{listItem.dueDate}}
+            />
+            <button class="delete" {{ on 'click' ( fn this.deleteListItem listItem.id )}}>Delete</button>
+        </li>
+    {{/each}}
+</ul>
