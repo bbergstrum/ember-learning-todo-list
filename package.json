@@ -56,5 +56,9 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "pouchdb": "^7.2.2",
+    "uuid": "^8.3.2"
   }
 }
